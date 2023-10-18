@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --darkgrayblue: 236, 13%, 42%;
+  --off-white: 36, 100%, 99%;
+  --grayblue: 233, 8%, 79%;
+  --verydarkblue: 233, 8%, 79%;
+  --softorange: 35, 77%, 62%;
+  --softred: 5, 85%, 63%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: hsl(var(--off-white));
+  color: hsl(var(--darkblue));
+}
