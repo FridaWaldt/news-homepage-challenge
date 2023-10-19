@@ -16,10 +16,17 @@ const Navbar = (props: Props) => {
 
   return (
     <div className='flex justify-between items-center w-full'>
-        <Image alt='logo' src={logo} className='w-10'/>
+        <Image alt='logo' src={logo} className='w-10 lg:w-14'/>
         <div className='relative '>
             <div>
-                <button onClick={toggleMenu}>
+                <ul className="lg:flex space-x-8 text-darkgrayblue">
+                    <li className="hidden lg:flex hover:text-softred cursor-pointer">Home</li>
+                    <li className="hidden lg:flex hover:text-softred cursor-pointer">New</li>
+                    <li className="hidden lg:flex hover:text-softred cursor-pointer">Popular</li>
+                    <li className="hidden lg:flex hover:text-softred cursor-pointer">Trending</li>
+                    <li className="hidden lg:flex hover:text-softred cursor-pointer">Categories</li>
+                </ul>
+                <button onClick={toggleMenu} className='lg:hidden'>
                     <Image alt='menu icon' src={iconmenu} />
                 </button>
                 {navToggle && ( 
@@ -32,12 +39,12 @@ const Navbar = (props: Props) => {
                         <button onClick={toggleMenu}>
                             <Image alt='menu icon' src={navToggle ? iconmenuclose : iconmenu} />
                         </button>
-                        <ul className=' pt-24'>
-                            <li className='py-3'>Home</li>
-                            <li className='py-3'>New</li>
-                            <li className='py-3'>Popular</li>
-                            <li className='py-3'>Trending</li>
-                            <li className='py-3'>Categories</li>
+                        <ul className=' pt-24 lg:flex '>
+                            <li className='py-3 hover:text-softred cursor-pointer'>Home</li>
+                            <li className='py-3 hover:text-softred cursor-pointer'>New</li>
+                            <li className='py-3 hover:text-softred cursor-pointer'>Popular</li>
+                            <li className='py-3 hover:text-softred cursor-pointer'>Trending</li>
+                            <li className='py-3 hover:text-softred cursor-pointer'>Categories</li>
                         </ul>
                     </div>
                   </div>
